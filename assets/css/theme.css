@@ -1,4 +1,42 @@
 @charset "UTF-8";
+.banner__video {
+  z-index: -1;
+}
+.banner__img {
+  position: relative;
+  left: 200px;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .banner__video {
+    display: none;
+  }
+  .banner__img {
+    position: absolute;
+    top: 350px;
+    left: 170px;
+    z-index: 1;
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0); /* Position initiale */
+  }
+  25% {
+    transform: translate(20px, -20px); /* Flottement en X et en Y */
+  }
+  50% {
+    transform: translate(40px, -40px); /* Flottement en X et en Y */
+  }
+  75% {
+    transform: translate(-30px, -40px); /* Flottement en X et en Y */
+  }
+}
+.banner__img {
+  animation: float 4s linear infinite;
+}
+
 @keyframes rotate-infinite {
   0% {
     transform: rotate(0deg);
@@ -27,99 +65,140 @@
     opacity: 1;
   }
 }
+@keyframes anime-section {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes anime-section2 {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes anime-section3 {
+  from {
+    transform: translatex(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+@keyframes anime-section4 {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .story__article::after,
 .story h2::after,
 #studio h2::before,
 #studio h2::after,
 .site-footer ul::after,
-.site-footer::before,
-.site-footer::after {
+.flowers,
+.flowers2 {
   animation: rotate-infinite linear 5s infinite;
 }
 
 /* CSS pour afficher les sections avec un effet fade-in au chargement de la page */
-s.banner {
+.banner {
   opacity: 0; /* La section est initialement transparente */
   transform: translateY(-50%); /* La section est décalée vers le haut en dehors de l'écran */
   transition: opacity 2s ease, transform 0.5s ease; /* Effet de fondu et de translation */
-}
-s.banner.show {
-  opacity: 1; /* La section devient opaque */
-  transform: translateY(0); /* La section revient à sa position d'origine */
-}
-
-.story__article {
-  opacity: 0;
-  transform: translatex(50%);
-  transition: opacity 2s ease, transform 0.5s ease;
-}
-.story__article.show {
-  opacity: 1;
-  transform: translateX(0);
+  animation: anime-section 2s ease-in-out forwards;
 }
 
 #studio {
   opacity: 0;
-  transform: translateX(50%);
-  transition: opacity 2s ease, transform 0.5s ease;
-}
-#studio.show {
-  opacity: 1;
-  transform: translateX(0);
+  animation: anime-section3 2s ease-in-out forwards;
 }
 
 #characters {
   opacity: 0;
-  transform: translateY(50%);
-  transition: opacity 2s ease, transform 0.5s ease;
-}
-#characters.show {
-  opacity: 1;
-  transform: translateY(0);
+  animation: anime-section4 2s ease-in-out forwards;
 }
 
 #place {
   opacity: 0;
-  transform: translateY(-50%);
-  transition: opacity 2s ease, transform 0.5s ease;
+  animation: anime-section2 2s ease-in-out forwards;
 }
-#place.show {
-  opacity: 1;
-  transform: translateY(0);
+
+.oscar {
+  opacity: 0;
+  animation: anime-section2 2s ease-in-out forwards;
 }
 
 /* animation des titres*/
+.titreAnime {
+  opacity: 0;
+}
+
+.titreAnime2 {
+  opacity: 0;
+}
+
 .run {
   display: inline-block;
   position: relative;
   animation: anime-titre 2s ease-in-out;
+  opacity: 1;
 }
 
 .run2 {
   display: inline-block;
   position: relative;
   animation: anime-titre2 2s ease-in-out;
+  opacity: 1;
 }
 
 /* gestion section oscar */
+.site-footer::after,
 .site-footer::before {
-  z-index: 1;
-}
-
-.site-footer::after {
-  z-index: 1;
+  display: none;
 }
 
 .oscar {
   display: flex;
-  direction: row;
   align-items: center;
-  z-index: 0;
+  z-index: -1;
 }
 .oscar__img {
   padding-top: 150px;
   padding-bottom: 50px;
   margin: auto;
+}
+
+.flowers {
+  position: absolute;
+  left: 170px;
+  top: 30px;
+}
+
+.flowers2 {
+  position: absolute;
+  right: -70px;
+  top: 10px;
+}
+
+.banner__container {
+  height: 250px;
+  width: 80%;
+  background-color: aqua;
 }
 
 /*# sourceMappingURL=theme.css.map */

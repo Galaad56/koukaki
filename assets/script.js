@@ -1,9 +1,7 @@
 console.log("test")
 
 document.addEventListener("DOMContentLoaded", function () {
-    const section1 = document.querySelector(".banner");
-    section1.classList.add("show");
-
+    
     const section2 = document.querySelector(".story__article");
     section2.classList.add("show");
 
@@ -18,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //animation stitres
 
-    const elements = document.querySelectorAll('.titreAnime');
+    /* const elements = document.querySelectorAll('.titreAnime');
     elements.forEach(element => {
       element.classList.add('run');
     });
@@ -26,13 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const elements2 = document.querySelectorAll('.titreAnime2');
     elements2.forEach(element => {
       element.classList.add('run2');
-    });
+    }); */
 
   });
 
   //animation au scroll
-
-  const observer = new IntersectionObserver(entries => {
+    //permier epartie du titre
+   const observer = new IntersectionObserver(entries => {
     // Loop over the entries
     entries.forEach(entry => {
       // If the element is visible
@@ -40,7 +38,35 @@ document.addEventListener("DOMContentLoaded", function () {
         // Add the animation class
         entry.target.classList.add("run");
       }
+        else {
+        entry.target.classList.remove("run");
+        }
     });
   });
-  
-  observer.observe(document.querySelector(".titreAnime"));
+
+  const sections = document.querySelectorAll(".titreAnime")
+    sections.forEach(section => {
+    observer.observe(section);
+  });
+    //deuxieme partie du titre
+  const observer2 = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is visible
+      if (entry.isIntersecting) {
+        // Add the animation class
+        entry.target.classList.add("run2");
+      }
+        else {
+        entry.target.classList.remove("run2");
+        }
+    });
+  });
+  //console.log (document.querySelector(".titreAnime"))
+  //observer.observe(document.querySelector(".titreAnime"));
+
+  const sections2 = document.querySelectorAll(".titreAnime2")
+    sections2.forEach(section => {
+    observer2.observe(section);
+    
+  });

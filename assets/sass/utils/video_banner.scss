@@ -1,0 +1,26 @@
+.banner{
+    &__video{
+        z-index: -1;
+    }
+
+     &__img{
+         position:relative;
+         left: 200px; 
+        z-index: 1;
+     }
+}
+
+@media (max-width: 768px) {
+    .banner{
+        &__video{
+            display:none;
+        }
+        
+        &__img{
+            position:absolute;
+            top: 350px; 
+            left: 170px; 
+            z-index: 1;
+        }  
+    }
+}

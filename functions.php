@@ -8,10 +8,10 @@ function theme_enqueue_styles() {
     
 }
 
-add_action('wp_enqueue_scripts', 'ajouter_script_custom');
+ add_action('wp_enqueue_scripts', 'ajouter_script_custom');
 function ajouter_script_custom() {
     //  script.js theme enfant
-    wp_enqueue_script('mon-scriptjs', get_stylesheet_directory_uri() . '/assets/script.js', array(), filemtime(get_stylesheet_directory() . '/assets/script.js'));
+    wp_enqueue_script('mon-scriptjs', get_stylesheet_directory_uri() . '/assets/script.js', array(), filemtime(get_stylesheet_directory() . '/assets/script.js'),true);
 }
 
 
