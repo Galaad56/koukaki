@@ -1,70 +1,4 @@
 @charset "UTF-8";
-.banner__video {
-  z-index: -1;
-}
-.banner__img {
-  position: relative;
-  left: 200px;
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .banner__video {
-    display: none;
-  }
-  .banner__img {
-    position: absolute;
-    top: 350px;
-    left: 170px;
-    z-index: 1;
-  }
-}
-@keyframes float {
-  0%, 100% {
-    transform: translate(0, 0); /* Position initiale */
-  }
-  25% {
-    transform: translate(20px, -20px); /* Flottement en X et en Y */
-  }
-  50% {
-    transform: translate(40px, -40px); /* Flottement en X et en Y */
-  }
-  75% {
-    transform: translate(-30px, -40px); /* Flottement en X et en Y */
-  }
-}
-.banner__img {
-  animation: float 4s linear infinite;
-}
-
-@keyframes rotate-infinite {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes anime-titre {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes anime-titre2 {
-  from {
-    transform: translateY(150%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @keyframes anime-section {
   from {
     transform: translateY(-50%);
@@ -105,22 +39,30 @@
     opacity: 1;
   }
 }
-.story__article::after,
-.story h2::after,
-#studio h2::before,
-#studio h2::after,
-.site-footer ul::after,
-.flowers,
-.flowers2 {
-  animation: rotate-infinite linear 5s infinite;
-}
-
 /* CSS pour afficher les sections avec un effet fade-in au chargement de la page */
 .banner {
   opacity: 0; /* La section est initialement transparente */
   transform: translateY(-50%); /* La section est décalée vers le haut en dehors de l'écran */
   transition: opacity 2s ease, transform 0.5s ease; /* Effet de fondu et de translation */
   animation: anime-section 2s ease-in-out forwards;
+  /*  &__container{
+     opacity: 0;
+     transition: opacity 2s ease, transform 0.5s ease; 
+     animation: anime-section4 2s ease-in-out forwards;
+   } */
+}
+
+.story__article {
+  opacity: 0;
+  animation: anime-section3 2s ease-in-out forwards;
+}
+
+.story h2::before {
+  left: -220px;
+}
+
+.story h2::after {
+  left: -175px;
 }
 
 #studio {
@@ -143,6 +85,26 @@
   animation: anime-section2 2s ease-in-out forwards;
 }
 
+@keyframes anime-titre {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes anime-titre2 {
+  from {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* animation des titres*/
 .titreAnime {
   opacity: 0;
@@ -164,6 +126,74 @@
   position: relative;
   animation: anime-titre2 2s ease-in-out;
   opacity: 1;
+}
+
+.banner__video {
+  z-index: -1;
+}
+.banner__container {
+  position: absolute;
+  left: 250px;
+  top: 270px;
+  height: 250px;
+  width: 80%;
+  z-index: 0;
+}
+.banner__img {
+  position: relative;
+  left: 200px;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .banner__video {
+    display: none;
+  }
+  .banner__container {
+    left: 0px;
+  }
+  .banner__img {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 80% !important;
+    z-index: 1;
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0); /* Position initiale */
+  }
+  25% {
+    transform: translate(20px, -20px); /* Flottement en X et en Y */
+  }
+  50% {
+    transform: translate(40px, -40px); /* Flottement en X et en Y */
+  }
+  75% {
+    transform: translate(-30px, -40px); /* Flottement en X et en Y */
+  }
+}
+.banner__img {
+  animation: float 4s linear infinite;
+}
+
+@keyframes rotate-infinite {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.story__article::after,
+.story h2::after,
+#studio h2::before,
+#studio h2::after,
+.site-footer ul::after,
+.flowers,
+.flowers2 {
+  animation: rotate-infinite linear 5s infinite;
 }
 
 /* gestion section oscar */
@@ -193,12 +223,6 @@
   position: absolute;
   right: -70px;
   top: 10px;
-}
-
-.banner__container {
-  height: 250px;
-  width: 80%;
-  background-color: aqua;
 }
 
 /*# sourceMappingURL=theme.css.map */

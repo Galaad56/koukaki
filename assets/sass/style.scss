@@ -1,5 +1,9 @@
 
 //imports
+@import "./utils/anim_section";
+
+@import "./utils/anim_title";
+
 @import "./utils/video_banner";
 
 @import "./utils/anim_float";
@@ -17,71 +21,6 @@
   }
 }
 
-@keyframes anime-titre {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes anime-titre2 {
-  from {
-    transform: translateY(150%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes anime-section {
-  from {
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes anime-section2 {
-  from {
-   transform: translateX(-50%);
-    opacity: 0;
-  }
-  to {
-   transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes anime-section3 {
-  from {
-    transform: translatex(50%);
-    opacity: 0;
-  }
-  to {
-    transform: translatex(0);
-    opacity: 1;
-  }
-}
-@keyframes anime-section4 {
-  from {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 // rotation des fleurs
   .story__article::after,
   .story h2::after,
@@ -94,63 +33,6 @@
   .flowers2
    {
     animation: rotate-infinite linear 5s infinite; 
-  }
-
-
-/* CSS pour afficher les sections avec un effet fade-in au chargement de la page */
-
-  .banner {
-    opacity: 0; /* La section est initialement transparente */
-    transform: translateY(-50%); /* La section est décalée vers le haut en dehors de l'écran */
-    transition: opacity 2s ease, transform 0.5s ease; /* Effet de fondu et de translation */
-    animation: anime-section 2s ease-in-out forwards;
-  
-  }
-  
-
-  #studio {
-    opacity: 0; 
-    animation: anime-section3 2s ease-in-out forwards; 
-  }
-
-  #characters {
-    opacity: 0;  
-    animation: anime-section4 2s ease-in-out forwards;
-    
-  }
-
-  #place {
-    opacity: 0; 
-    animation: anime-section2 2s ease-in-out forwards;
-  }
-
-  .oscar{
-    opacity: 0; 
-    animation: anime-section2 2s ease-in-out forwards;
-  }
-
-  
-  /* animation des titres*/
-  .titreAnime{
-    opacity: 0;
-  }
-  .titreAnime2{
-    opacity: 0;
-  }
-
-
- .run {
-   display:inline-block;
-   position: relative;
-   animation: anime-titre 2s ease-in-out;
-   opacity: 1;
-  }
-
-  .run2 {
-    display:inline-block;
-    position: relative;
-    animation: anime-titre2 2s ease-in-out;
-    opacity: 1;
   }
 
 /* gestion section oscar */
@@ -183,12 +65,4 @@ top:30px;
   position:absolute;
   right: -70px;
   top:10px;
-}
-
-//effet parallaxe
-
-.banner__container{
-  height: 250px;
-  width:80%;
-  background-color: aqua;
 }

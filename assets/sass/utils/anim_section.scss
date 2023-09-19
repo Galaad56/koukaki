@@ -1,0 +1,93 @@
+@keyframes anime-section {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes anime-section2 {
+    from {
+     transform: translateX(-50%);
+      opacity: 0;
+    }
+    to {
+     transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes anime-section3 {
+    from {
+      transform: translatex(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translatex(0);
+      opacity: 1;
+    }
+  }
+  @keyframes anime-section4 {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* CSS pour afficher les sections avec un effet fade-in au chargement de la page */
+
+  .banner {
+    opacity: 0; /* La section est initialement transparente */
+    transform: translateY(-50%); /* La section est décalée vers le haut en dehors de l'écran */
+    transition: opacity 2s ease, transform 0.5s ease; /* Effet de fondu et de translation */
+    animation: anime-section 2s ease-in-out forwards;
+
+   /*  &__container{
+      opacity: 0;
+      transition: opacity 2s ease, transform 0.5s ease; 
+      animation: anime-section4 2s ease-in-out forwards;
+    } */
+
+  }
+  
+  .story__article{
+    opacity: 0;  
+    animation: anime-section3 2s ease-in-out forwards;
+  }
+
+  .story h2::before { // decalage de la fleur qui se superpose ave le texte si on anime la section
+    left: -220px;
+  }
+
+  .story h2::after {
+    left: -175px;
+  }
+
+  #studio {
+    opacity: 0; 
+    animation: anime-section3 2s ease-in-out forwards; 
+  }
+
+  #characters {
+    opacity: 0;  
+    animation: anime-section4 2s ease-in-out forwards;
+    
+  }
+
+  #place {
+    opacity: 0; 
+    animation: anime-section2 2s ease-in-out forwards;
+  }
+
+  .oscar{
+    opacity: 0; 
+    animation: anime-section2 2s ease-in-out forwards;
+  }
+ 

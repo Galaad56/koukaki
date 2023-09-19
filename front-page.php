@@ -6,10 +6,10 @@ get_header();
     <main id="primary" class="site-main">
         <section class="banner">
       
-            <!-- <video class="banner__video" autoplay muted loop  poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>">
+           <video class="banner__video" autoplay muted loop  poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>">
                  <source src="<?php echo get_stylesheet_directory_uri() . '/assets/videos/video-koukaki.mp4'; ?>" type="video/mp4">
            
-            </video> -->
+            </video>
             <div class=banner__container data-0="transform: translateY(0px);"data-500="transform: translateY(250px);">
                 <img class="banner__img" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">   
             </div >
@@ -19,8 +19,9 @@ get_header();
             </script>
         </section>
         <section id="#story" class="story">
-            <h2><span class="titreAnime">L'</span><span class="titreAnime2">histoire</span></h2>
+            
             <article id="" class="story__article">
+                <h2><span class="titreAnime">L'</span><span class="titreAnime2">histoire</span></h2>
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
             <?php

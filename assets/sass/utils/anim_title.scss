@@ -1,0 +1,47 @@
+@keyframes anime-titre {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes anime-titre2 {
+    from {
+      transform: translateY(150%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+   
+  /* animation des titres*/
+  .titreAnime{
+    opacity: 0;
+  }
+  .titreAnime2{
+    opacity: 0;
+  }
+
+
+ .run {
+   display:inline-block;
+   position: relative;
+   animation: anime-titre 2s ease-in-out;
+   opacity: 1;
+  }
+
+  .run2 {
+    display:inline-block;
+    position: relative;
+    animation: anime-titre2 2s ease-in-out;
+    opacity: 1;
+  }
+
+ 
