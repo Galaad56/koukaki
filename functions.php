@@ -7,7 +7,7 @@ function theme_enqueue_styles() {
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/assets/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/theme.css'));
     //chargement du CSS pour swiper
    // wp_enqueue_style('swiper-style', "https://unpkg.com/swiper/swiper-bundle.min.css", array(),"1.0",true);
-    wp_enqueue_style('swiper-style', "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css", array(),"1.0",true);
+    wp_enqueue_style('swiper-style', "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css", array(),"1.0");
 }
 
  add_action('wp_enqueue_scripts', 'ajouter_script_custom');
