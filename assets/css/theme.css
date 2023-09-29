@@ -145,6 +145,13 @@
   z-index: 1;
 }
 
+.big_cloud {
+  position: absolute;
+  left: 250px;
+  top: 270px;
+  background-color: aqua;
+}
+
 @media (max-width: 768px) {
   .banner__video {
     display: none;
@@ -196,6 +203,19 @@
   width: 100%;
 }
 
+#characters {
+  display: flex;
+  flex-direction: column;
+}
+
+#place {
+  background-image: url("../images/video-koukaki.png") !important;
+}
+
+#cloud1 {
+  filter: blur(10px);
+}
+
 @keyframes rotate-infinite {
   0% {
     transform: rotate(0deg);
@@ -244,7 +264,7 @@
 }
 
 #titreh3 {
-  width: 42%;
+  background-color: aqua;
   text-align: left;
 }
 

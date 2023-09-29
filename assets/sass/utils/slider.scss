@@ -15,3 +15,8 @@
     display: block;
     width: 100%;
   }
+
+  #characters{
+    display: flex;
+    flex-direction: column;
+  }

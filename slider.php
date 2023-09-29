@@ -11,9 +11,9 @@
             $characters_query = new WP_Query($args);
             ?>
             
-          
+      
 <div class="swiper mySwiper">
-<h3 id="titreh3"><span class="titreAnime">Les</span><span class="titreAnime2">&nbsp;personnages</span></h3>
+
     <div class="swiper-wrapper">
                     
         <?php

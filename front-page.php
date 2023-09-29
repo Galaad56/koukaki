@@ -13,7 +13,9 @@ get_header();
             <div class=banner__container data-0="transform: translateY(0px);"data-500="transform: translateY(250px);">
                 <img class="banner__img" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">   
             </div >
-            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"> </script> -->
+            <div class="big_cloud" data-0="transform: translatex(0px);"data-500="transform: translatex(250px);">
+                    <img id="cloud1" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?>" alt="big cloud">
+            </div>
         </section>
         <section id="#story" class="story">
             
@@ -22,6 +24,7 @@ get_header();
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
             <article id="characters">
+            <h3 id="titreh3"><span class="titreAnime">Les</span><span class="titreAnime2">&nbsp;personnages</span></h3>
                 <?php
                 get_template_part("slider");
                 ?>
@@ -29,11 +32,22 @@ get_header();
                 
             </article>
             <article id="place">
+                
                 <div>
                 <h3><span class="titreAnime">Le</span><span class="titreAnime2">&nbsp;lieu</span></h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
-
+               <!--  <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+                <script>
+                        var s = skrollr.init();
+                </script> -->
+                
+                <div class="big_cloud" data-0="transform: translatex(0px);"data-500="transform: translatex(250px);" >
+                    <img id="cloud1" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?>" alt="big cloud">
+                </div>
+                <div class="little_cloud" >
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/little_cloud.png'; ?>" alt="little cloud">
+                </div>
             </article>
         </section>
 
