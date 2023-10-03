@@ -19,7 +19,8 @@ function ajouter_script_custom() {
     //skroller
     wp_enqueue_script('mon-scriptjs3', "https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js", array(),"1.0",true);
     wp_enqueue_script('mon-scriptjs4', get_stylesheet_directory_uri() . '/assets/skroller.js', array(), filemtime(get_stylesheet_directory() . '/assets/skroller.js'),true);
-    
+    //script menu burger
+    wp_enqueue_script('mon-scriptjs5', get_stylesheet_directory_uri() . '/assets/script_menu.js', array(), filemtime(get_stylesheet_directory() . '/assets/script_menu.js'),true);
 }
 
 
