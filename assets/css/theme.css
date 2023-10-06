@@ -77,6 +77,7 @@
 
 #place {
   opacity: 1;
+  animation: anime-section2 2s ease-in-out forwards;
 }
 
 .oscar {
@@ -144,7 +145,7 @@
   z-index: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .banner__video {
     display: none;
   }
@@ -200,37 +201,47 @@
   flex-direction: column;
 }
 
+#titreh3 {
+  width: 50%;
+}
+
 #place {
   background-image: url("../images/video-koukaki.png") !important;
 }
 
-#cloud1 {
+#cloud1, #cloud2 {
   filter: blur(10px);
 }
 
 .big_cloud {
-  background-color: aqua;
+  position: absolute;
+  top: 5em;
+  left: 25em;
+  /* top: -150px;
+  left: -200px; */
 }
 
 .little_cloud {
-  background-color: rgb(0, 255, 38);
+  position: absolute;
+  /*  top:-50px;
+   left: -800px; */
+  top: 18em;
+  left: 15em;
 }
 
-.title_place {
-  background-color: blueviolet;
+@media (max-width: 700px) {
+  #cloud1, #cloud2 {
+    display: none;
+  }
 }
-
-.menu_container {
-  display: flex;
-  flex-direction: row;
-}
-
 .burger-menu {
   display: block;
   cursor: pointer;
-  position: relative;
-  left: 50px;
-  top: 0px;
+}
+
+.menu-items ul {
+  margin: auto;
+  padding: 0;
 }
 
 .menu-items {
@@ -246,27 +257,24 @@
 .menu-items__container__nav {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: left;
 }
 
-ul {
+.liste {
   list-style-type: none;
   text-align: center;
   font-size: 30px;
-  padding-right: 80px;
 }
 
-ul li {
+.liste li {
   margin-top: 20px;
 }
 
-li a {
+.liste a {
   text-decoration: none;
   font-weight: bold;
 }
 
-li a:hover {
+.liste a:hover {
   text-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
 }
 
@@ -281,24 +289,79 @@ li a:hover {
   display: none;
 }
 
-.cross {
-  display: none;
-  font-weight: bold;
-  font-size: 30px;
+.bar1--remove {
+  animation: inv-rotate linear 1s forwards;
 }
-.cross--show {
-  display: block;
+.bar1--move {
+  animation: rotate linear 1s forwards;
+}
+
+.bar3--remove {
+  animation: inv-rotate2 linear 1s forwards;
+}
+.bar3--move {
+  animation: rotate2 linear 1s forwards;
 }
 
 .menu-items.show-menu {
   display: block;
 }
 
+.menu-items p {
+  font-size: 15px;
+  position: absolute;
+  bottom: 150px;
+}
+
 .img_cat {
   position: absolute;
-  top: 100px;
-  left: 100px;
   animation: floating 2s infinite ease-in-out;
+}
+
+#cat1 {
+  top: 8emp;
+  left: 11em;
+}
+
+#cat2 {
+  top: 30em;
+  right: 20em;
+}
+
+#cat3 {
+  bottom: 15em;
+  left: 5em;
+}
+
+.img_flower {
+  position: absolute;
+  animation: rotate-infinite linear 5s infinite;
+}
+
+#flower1 {
+  right: 10em;
+  top: 10em;
+}
+
+#flower2 {
+  left: -5em;
+  top: 9em;
+}
+
+#flower3 {
+  right: -20em;
+  bottom: -20em;
+}
+
+#flower4 {
+  right: -5em;
+  top: 25em;
+  width: 10%;
+}
+
+#flower5 {
+  left: 20em;
+  bottom: 30em;
 }
 
 @keyframes floating {
@@ -307,6 +370,61 @@ li a:hover {
   }
   50% {
     transform: translateY(-10px); /* Ajustez la valeur selon votre préférence */
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg) translateY(6px);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-45deg) translateY(-6px);
+  }
+}
+@keyframes inv-rotate {
+  0% {
+    transform: rotate(45deg) translateY(6px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px);
+  }
+}
+@keyframes inv-rotate2 {
+  0% {
+    transform: rotate(-45deg) translateY(-6px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px);
+  }
+}
+@media (max-width: 1100px) {
+  #cat2, #flower5 {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+  #cat1, #cat3, #flower1, #flower2, #flower3, #flower4 {
+    display: none;
+  }
+}
+@media screen and (min-width: 150px) {
+  .main-navigation {
+    height: 80px;
+  }
+  .main-navigation ul {
+    display: flex;
+  }
+}
+@media (max-width: 700px) {
+  .empty {
+    display: none;
   }
 }
 @keyframes rotate-infinite {
@@ -354,6 +472,20 @@ li a:hover {
   position: absolute;
   right: -70px;
   top: 10px;
+}
+
+@media (min-width: 900px) and (max-width: 1064px) {
+  h3 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 899px) {
+  h3 {
+    font-size: 1.5em;
+  }
+  #titreh3 {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=theme.css.map */

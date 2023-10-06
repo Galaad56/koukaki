@@ -14,15 +14,18 @@ get_header();
                 <img class="banner__img" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">   
             </div >
         </section>
-        <section id="#story" class="story">
+        
+        <section id="story" class="story">
             
             <article id="" class="story__article">
                 <h2><span class="titreAnime">L'</span><span class="titreAnime2">histoire</span></h2>
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
             <article id="characters">
-            <h3 id="titreh3"><span class="titreAnime">Les</span><span class="titreAnime2">&nbsp;personnages</span></h3>
-                <?php
+            <div>
+                <h3 id="titreh3"><span class="titreAnime">Les</span><span class="titreAnime2">&nbsp;personnages</span></h3>
+            </div>
+            <?php
                 get_template_part("slider");
                 ?>
 
@@ -33,17 +36,15 @@ get_header();
                 <div class=title_place>
                 <h3><span class="titreAnime">Le</span><span class="titreAnime2">&nbsp;lieu</span></h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
-                </div>
-                              
-                <div class="big_cloud" data-0="transform: translatex(0px);"data-500="transform: translatex(250px);">
+                </div>          
+                <div class="big_cloud" data-1500="transform: translateX(300px);"data-2000="transform: translateX(0px);">
                     <img id="cloud1" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?>" alt="big cloud">
                 </div>
-                <div class="little_cloud" >
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/little_cloud.png'; ?>" alt="little cloud">
+                <div class="little_cloud" data-1500="transform: translateX(300px);"data-2000="transform: translateX(0px);" >
+                <img id="cloud2" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/little_cloud.png'; ?>" alt="little cloud">
                 </div>
             </article>
         </section>
-
         <section id="studio">
         <h2><span class="titreAnime">Studio</span><span class="titreAnime2">&nbsp;Koukaki</span></h2>
             <div>

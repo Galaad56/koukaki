@@ -72,3 +72,18 @@ top:30px;
   right: -70px;
   top:10px;
 }
+
+@media (min-width:900px) and (max-width: 1064px) {
+  h3{
+    font-size: 2em;
+  }
+}
+  
+@media (max-width: 899px) {
+  h3{
+    font-size: 1.5em;
+  }
+  #titreh3{
+    width: 100%;
+  }
+}
