@@ -49,12 +49,6 @@
     transition: opacity 2s ease, transform 0.5s ease; /* Effet de fondu et de translation */
     animation: anime-section 2s ease-in-out forwards;
 
-   /*  &__container{
-      opacity: 0;
-      transition: opacity 2s ease, transform 0.5s ease; 
-      animation: anime-section4 2s ease-in-out forwards;
-    } */
-
   }
   
   .story__article{
@@ -82,7 +76,7 @@
   }
 
   #place {
-    opacity: 1; 
+    opacity: 0; 
    animation: anime-section2 2s ease-in-out forwards;
   }
 

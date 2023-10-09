@@ -1,5 +1,3 @@
-console.log("test")
-
 
   //animation au scroll
     //permiere partie du titre
@@ -7,12 +5,13 @@ console.log("test")
    const observer = new IntersectionObserver(entries => {
     // Loop over the entries
     entries.forEach(entry => {
-      // If the element is visible
+      // si l'élément est visible
       if (entry.isIntersecting) {
-        // Add the animation class
+        // ajouter classe 
         entry.target.classList.add("run");
       }
         else {
+          // supprimer  classe 
         entry.target.classList.remove("run");
         }
     });
@@ -22,13 +21,13 @@ console.log("test")
     sections.forEach(section => {
     observer.observe(section);
   });
+
+  
     //deuxieme partie du titre
   const observer2 = new IntersectionObserver(entries => {
-    // Loop over the entries
+ 
     entries.forEach(entry => {
-      // If the element is visible
       if (entry.isIntersecting) {
-        // Add the animation class
         entry.target.classList.add("run2");
       }
         else {
@@ -36,8 +35,6 @@ console.log("test")
         }
     });
   });
-  //console.log (document.querySelector(".titreAnime"))
-  //observer.observe(document.querySelector(".titreAnime"));
 
   const sections2 = document.querySelectorAll(".titreAnime2")
     sections2.forEach(section => {

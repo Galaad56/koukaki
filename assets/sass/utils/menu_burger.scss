@@ -1,3 +1,14 @@
+//keyframes
+@keyframes anime-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+//gestion menu
 
 .burger-menu {
     display: block;
@@ -9,85 +20,89 @@
   padding: 0;
 }
 
-  .menu-items {
-    display: none;
-    background-color: #FFF5E9;
-    height: 100vh;
+.menu-items {
+  display: none;
+  background-color: #FFF5E9;
+  height: 100vh;
+  opacity: 0; 
+  animation: anime-menu 2s linear forwards;
 
-    &__container{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    &__container__logo{
-    }
-
-    &__container__nav{
-      display: flex;
-      flex-direction: row;
-    }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  &__container__logo{
+  }
+
+  &__container__nav{
+    display: flex;
+    flex-direction: row;
+  }
+}
   
-  .liste{
-    list-style-type: none;
-    text-align: center;
-    font-size: 30px;
-    //padding-right: 80px;
+.liste{
+  list-style-type: none;
+  text-align: center;
+  font-size: 30px;
   }
-  .liste li{
-    margin-top: 20px;
-  }
-  .liste a{
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .liste a:hover{
-    text-shadow: 0 0 10px rgba(255, 165, 0, 0.7); 
-  }
+
+.liste li{
+  margin-top: 20px;
+}
+.liste a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.liste a:hover{
+  text-shadow: 0 0 10px rgba(255, 165, 0, 0.7); 
+}
 
   /*  bouton burger  */
 .bar {
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    margin: 6px 0;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
 
-    &--hide{
-      display:none;
-    }
- 
+  &--hide{
+    display:none;
+  }
 }
- .bar1{
-  &--remove{
-    animation: inv-rotate linear 1s forwards;
-  }
 
-  &--move{
-    animation: rotate linear 1s forwards; 
-  }
- }
+.bar1{
+&--remove{
+  animation: inv-rotate linear 1s forwards;
+}
 
- .bar3{
-  &--remove{
-    animation: inv-rotate2 linear 1s forwards;
-  }
+&--move{
+  animation: rotate linear 1s forwards; 
+}
+}
 
-  &--move{
-    animation: rotate2 linear 1s forwards; 
-  }
- }
+.bar3{
+&--remove{
+  animation: inv-rotate2 linear 1s forwards;
+}
+
+&--move{
+  animation: rotate2 linear 1s forwards; 
+}
+}
 
 
-  .menu-items.show-menu {
-    display: block;
-  }
+.menu-items.show-menu {
+  display: block;
+}
 
-  .menu-items p{
-    font-size: 15px;
-    position: absolute;
-    bottom: 150px;
-  }
+.menu-items p{
+  font-size: 15px;
+  position: absolute;
+  bottom: 150px;
+}
+
 //gestion images
   .img_cat{
     position: absolute;
@@ -120,12 +135,13 @@
 
    #flower2{
     left:-5em;
-    top: 9em;
+    top: 19em;
   }
 
   #flower3{
-    right:-20em;
-    bottom: -20em;
+    right:-15em;
+    bottom: -10em;
+    width: 30%;
   }
 
   #flower4{
@@ -139,9 +155,6 @@
     bottom: 30em;
   } 
 
-
-
-
   //keyframes
 @keyframes floating {
     0%, 100% {
@@ -153,7 +166,7 @@
 }
 
 
-// rotation menu burger
+      // rotation menu burger
 @keyframes rotate {
   0% {
       transform: rotate(0deg);
@@ -191,6 +204,8 @@
       transform: rotate(0deg)translateY(0px);
   }
 }
+
+
 // media query gestion images
 
 @media (max-width: 1100px) {
