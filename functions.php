@@ -12,15 +12,15 @@ function theme_enqueue_styles() {
  add_action('wp_enqueue_scripts', 'ajouter_script_custom');
 function ajouter_script_custom() {
     //  script.js theme enfant
-    wp_enqueue_script('mon-scriptjs', get_stylesheet_directory_uri() . '/assets/script.js', array(), filemtime(get_stylesheet_directory() . '/assets/script.js'),true);
+    wp_enqueue_script('mon-scriptjs', get_stylesheet_directory_uri() . '/assets/js/script.js', array(), filemtime(get_stylesheet_directory() . '/assets/js/script.js'),true);
     //script du slider
     wp_enqueue_script('swiper-scriptjs', "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js", array(),"1.0",true);
-    wp_enqueue_script('script-slider', get_stylesheet_directory_uri() . '/assets/script_slider.js', array(), filemtime(get_stylesheet_directory() . '/assets/script_slider.js'),true);
+    wp_enqueue_script('script-slider', get_stylesheet_directory_uri() . '/assets/js/script_slider.js', array(), filemtime(get_stylesheet_directory() . '/assets/js/script_slider.js'),true);
     //skroller
     wp_enqueue_script('script-skrollr-link', "https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js", array(),"1.0",true);
-    wp_enqueue_script('script-skroller', get_stylesheet_directory_uri() . '/assets/skroller.js', array(), filemtime(get_stylesheet_directory() . '/assets/skroller.js'),true);
+    wp_enqueue_script('script-skroller', get_stylesheet_directory_uri() . '/assets/js/skroller.js', array(), filemtime(get_stylesheet_directory() . '/assets/js/skroller.js'),true);
     //script menu burger
-    wp_enqueue_script('script-menu', get_stylesheet_directory_uri() . '/assets/script_menu.js', array(), filemtime(get_stylesheet_directory() . '/assets/script_menu.js'),true);
+    wp_enqueue_script('script-menu', get_stylesheet_directory_uri() . '/assets/js/script_menu.js', array(), filemtime(get_stylesheet_directory() . '/assets/js/script_menu.js'),true);
 }
 
 

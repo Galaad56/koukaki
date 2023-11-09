@@ -26,7 +26,7 @@ get_header();
                 <h3 id="titreh3"><span class="titreAnime">Les</span><span class="titreAnime2">&nbsp;personnages</span></h3>
             </div>
             <?php
-                get_template_part("slider");
+                get_template_part('assets/templates parts/slider');
                 ?>
 
                 
@@ -56,5 +56,5 @@ get_header();
 
 <?php
 
-get_template_part( 'oscar' );
+get_template_part( 'assets/templates parts/oscar' );
 get_footer();

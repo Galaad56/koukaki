@@ -14,76 +14,7 @@
 
 @import "./utils/menu_burger";
 
+@import "./utils/rotate_flowers";
 
 
-//keyframes
 
-@keyframes rotate-infinite {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-// rotation des fleurs
-  .story__article::after,
-  .story h2::after,
-  #studio h2::before,
-  #studio h2::after,
-  .site-footer ul::after,
-  //.site-footer::before,
-  //.site-footer::after,
-  .flowers,
-  .flowers2
-   {
-    animation: rotate-infinite linear 5s infinite; 
-  }
-
-/* gestion section oscar */
-
-.site-footer::after,
-.site-footer::before{
-  display: none;
-}
-
-.oscar{
-
-  display: flex;
-  align-items: center;
-  z-index: -1;
-
-  &__img{
-      padding-top: 150px;
-      padding-bottom: 50px;
-      margin: auto;
-  }
-}
-
-.flowers{
-  position:absolute;
-left: 170px;
-top:30px;
-}
-
-.flowers2{
-  position:absolute;
-  right: -70px;
-  top:10px;
-}
-
-@media (min-width:900px) and (max-width: 1064px) {
-  h3{
-    font-size: 2em;
-  }
-}
-  
-@media (max-width: 899px) {
-  h3{
-    font-size: 1.5em;
-  }
-  #titreh3{
-    width: 100%;
-  }
-}
